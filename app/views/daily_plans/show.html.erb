@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @daily_plan.date %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_daily_plan_path(@daily_plan) %> |
+  <%= link_to 'Back', daily_plans_path %>
+</p>
+
+<h2>Diversions Planned</h2>
+<div id="messages">
+  <%= render @daily_plan.diversion_requests %>
+</div>
+
+<%= link_to 'New Diversion Request', new_daily_plan_diversion_request_path(@daily_plan) %>

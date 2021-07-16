@@ -1,0 +1,22 @@
+<%= form_with(model: daily_plan) do |form| %>
+  <% if daily_plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(daily_plan.errors.count, "error") %> prohibited this daily_plan from being saved:</h2>
+
+      <ul>
+        <% daily_plan.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

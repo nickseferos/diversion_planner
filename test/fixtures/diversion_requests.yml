@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  container_number: MyString
+  set_asides_required: 1
+  current_row: MyString
+  line: one
+  daily_plan: one
+
+two:
+  container_number: MyString
+  set_asides_required: 1
+  current_row: MyString
+  line: two
+  daily_plan: two

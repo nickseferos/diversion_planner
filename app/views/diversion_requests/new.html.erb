@@ -1,0 +1,13 @@
+<h1>New Diversion Request</h1>
+
+<%= form_with(model: [@diversion_request.daily_plan, @diversion_request]) do |form| %>
+  <div class="field">
+    <%= form.text_field :container_number, placeholder: 'Container number' %>
+    <%= form.number_field :set_asides_required, placeholder: 'Set asides required' %>
+    <%= form.text_field :current_row, placeholder:'Current Row' %>
+    <%= form.text_field :line_id, placeholder: 'Line by ID' %>
+    <%= form.submit "Save" %>
+  </div>
+<% end %>
+
+<% link_to 'Back', @diversion_request.daily_plan %>
