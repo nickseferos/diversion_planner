@@ -1,3 +1,3 @@
 class DailyPlan < ApplicationRecord
-  has_many :diversion_requests
+  has_many :diversion_requests, dependent: :destroy
 end

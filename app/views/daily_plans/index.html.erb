@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Daily Plans</h1>
+<h1>Daily Plans</h1> <%= link_to 'New Daily Plan', new_daily_plan_path %>
 
 <table>
   <thead>
@@ -13,7 +13,7 @@
   <tbody>
     <% @daily_plans.each do |daily_plan| %>
       <tr>
-        <td><%= daily_plan.date %></td>
+        <td><%= daily_plan.date.strftime('%A, %b %d') %></td>
         <td><%= link_to 'Show', daily_plan %></td>
         <td><%= link_to 'Edit', edit_daily_plan_path(daily_plan) %></td>
         <td><%= link_to 'Destroy', daily_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,5 +23,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Daily Plan', new_daily_plan_path %>

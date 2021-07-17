@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @daily_plan.date %>
-</p>
+<h1>
+  <%= @daily_plan.date.strftime("%A, %b %d") %>
+</h1>
 
 <p>
   <%= link_to 'Edit', edit_daily_plan_path(@daily_plan) %> |
